@@ -8,14 +8,14 @@ main(int argc, char *argv[])
 {
   STARTUPINFO startupInfo;
   PROCESS_INFORMATION piProcInfo;
-  
+
   GetStartupInfo(&startupInfo);
-  
+
   if (CreateProcess(NULL, "NOTEPAD CreateProcess.c", NULL, NULL,
 		    FALSE, 0, NULL, NULL, &startupInfo,
 		    &piProcInfo)) {
-    WaitForObject(piProcInfo.hProcess, 0);
-  } 
+    WaitForSingleObject(piProcInfo.hProcess, 0);
+  }
   else {
   }
-}         
+}
