@@ -1,4 +1,4 @@
-all: CreateProcess
+all: WCreateProcess
 
-CreateProcess: CreateProcess.c
+CreateProcess: WCreateProcess.c
 	gcc -o $@ $< 

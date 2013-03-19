@@ -1,8 +1,8 @@
 .phony: all
 
-all: DirectorioActual Fork ProcesoSinSenal SenalProceso
+all: LDirectorioActual LFork LProcesoSinSenal LSenalProceso
 
 clean:
-	rm -f DirectorioActual Fork ProcesoSinSenal SenalProceso
+	rm -f LDirectorioActual LFork LProcesoSinSenal LSenalProceso
 
 
