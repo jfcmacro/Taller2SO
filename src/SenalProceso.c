@@ -32,7 +32,7 @@ main(int argc, char *argv[]) {
    * terminado
    */
   for (;;) {
-    fprintf(stdout, "Esperando señal\n");
+    fprintf(stdout, "Esperando senal\n");
     sleep(TIMEOUT);
   } 
 }

@@ -1,10 +1,10 @@
 /* fork.c */
-/* $Id: fork.c,v 1.1.1.1 2003/06/19 19:00:15 fcardona Exp $ */
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
 #include <sys/types.h>
+#include <stdlib.h>
 
 int
 main(int argc, char *argv[]) {

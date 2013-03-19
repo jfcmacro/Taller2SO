@@ -1,14 +1,14 @@
 /* DirectorioActual.c */
-/* $Id: DirectorioActual.c,v 1.1.1.1 2003/06/19 19:00:15 fcardona Exp $ */
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
 int
 main(int argc, char *argv[]) {
-  
+
   int retVal;
   pid_t pid;
 
@@ -28,11 +28,11 @@ main(int argc, char *argv[]) {
     wait(&retVal);
     // Verifica si el hijo terminó bien
     if (WIFEXITED(retVal)) {
-      fprintf(stdout, "El proceso terminó bien: %d\n", 
+      fprintf(stdout, "El proceso termino bien: %d\n",
 	      WEXITSTATUS(retVal));
     }
     else if (WIFSIGNALED(retVal)) { // Fue señalizado
-      fprintf(stderr, "La señal capturada: %d\n",
+      fprintf(stderr, "La senal capturada: %d\n",
 	      WTERMSIG(retVal));
     }
     else if (WIFSTOPPED(retVal)) {
