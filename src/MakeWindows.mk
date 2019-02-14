@@ -1,4 +1,4 @@
 all: WCreateProcess
 
 CreateProcess: WCreateProcess.c
-	gcc -o $@ $< 
+	$(CC) -o $@ $< 
